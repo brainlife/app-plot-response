@@ -6,4 +6,4 @@
 rm -rf images
 rm -rf images.json
 
-singularity exec -e docker://brainlife/pythonvtk:1.2 ./plot_response.py
+time singularity exec -e docker://brainlife/pythonvtk:1.2 ./plot_response.py
