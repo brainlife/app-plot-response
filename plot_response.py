@@ -16,14 +16,14 @@ def plot_response(response_src, out_png=False):
     vdisplay.start()
 
     response_src = np.loadtxt(src_txt)
-    response_src = response_src[1]
+    if len(response_src.shape) > 1:
+        response_src = response_src[1]
     sphere = get_sphere('symmetric724')
     sh_resp = AxSymShResponse(0, response_src)
     sig_resp = sh_resp.on_sphere(sphere)
     sig_resp = sig_resp[None, None, None, :]
 
     ren = window.Renderer()
-    #sphere_actor = actor.sphere(sig_resp, sphere)
     sphere_actor = actor.odf_slicer(sig_resp, sphere=sphere,colormap='blues')
     ren.add(sphere_actor)
     my_camera = ren.camera()
