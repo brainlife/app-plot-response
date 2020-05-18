@@ -8,7 +8,7 @@ This app will plot the single-fiber response function onto a sphere for QA of th
 ![example_response](https://github.com/brainlife/app-plot-response/blob/v1.0/image.png)
 
 
-Good fits should look like the image on the left, while bad fits look like the image on the right. 
+Good fits should look like the image on the right, while bad fits look like the image on the left. 
 
 ### Authors 
 
