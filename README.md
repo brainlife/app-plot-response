@@ -4,6 +4,10 @@
 # Plot response function 
 
 This app will plot the single-fiber response function onto a sphere for QA of the CSD fit. This app takes in the response.txt file from the CSD datatype as input and outputs an image of the single-fiber response function mapped to a sphere.
+
+
+
+
 Good fits should look like the image on the left, while bad fits look like the image on the right. 
 
 ### Authors 
