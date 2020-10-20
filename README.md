@@ -80,10 +80,10 @@ The secondary output of this app is `product.json`. This file allows web interfa
 
 This App requires the following libraries when run locally. 
 
-- Python3: 
-- Xvfb: 
-- numpy: 
-- dipy: 
-- json: 
-- Xvfbwrapper: 
-- singularity: 
+- Python3: https://mrtrix.readthedocs.io/en/3.0_rc3/installation/linux_install.html
+- Xvfb: https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
+- numpy: https://numpy.org/install/
+- dipy: https://dipy.org/documentation/1.2.0./installation/
+- json: https://pypi.org/project/jsonlib-python3/
+- Xvfbwrapper: https://pypi.org/project/xvfbwrapper/
+- singularity: https://singularity.lbl.gov/quickstart
