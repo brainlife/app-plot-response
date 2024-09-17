@@ -7,3 +7,18 @@ rm -rf images
 rm -rf images.json
 
 time singularity exec -e docker://brainlife/pythonvtk:1.2 ./plot_response.py
+
+# create product.json
+cat << EOF > product.json
+{
+    "brainlife": [
+        { 
+            "type": "image/png", 
+            "name": "Alignment Check (-x 0.5)",
+            "base64": "$(base64 -w 0 images/response.png)"
+        }
+    ]
+}
+EOF
+
+
