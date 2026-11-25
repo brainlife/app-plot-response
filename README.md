@@ -3,6 +3,29 @@
 
 # Plot response function 
 
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Renders the single-fiber response function of a CSD fit on a sphere as a PNG image with DIPY/VTK, for quality control of the response estimate.**
+
+Reads response.txt from a CSD output (using the second row when several rows are present), builds an axially symmetric spherical-harmonic response with DIPY and renders it on the symmetric724 sphere off-screen (Xvfb). Use it to check that the response looks like a flat, disc-shaped single-fiber profile; the README shows good versus bad examples.
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.311](https://doi.org/10.25663/brainlife.app.311)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `response` | `neuro/csd` | yes | The path to the CSD datatype containing the response function |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `images` | `generic/image/png` | A png of the response function mapped to a sphere |
+
+Runtime: container `brainlife/pythonvtk:1.2`; 1 CPUs; 8 GB memory; 0.25 h walltime.
+
+Please cite:
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 This app will plot the single-fiber response function onto a sphere for QA of the CSD fit. This app takes in the response.txt file from the CSD datatype as input and outputs an image of the single-fiber response function mapped to a sphere.
 
 ![example_response](https://github.com/brainlife/app-plot-response/blob/v1.0/image.png)
